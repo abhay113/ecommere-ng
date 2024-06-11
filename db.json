@@ -1,0 +1,33 @@
+{
+  "seller": [
+    {
+      "id": "906f",
+      "name": "Abhay Chavan",
+      "email": "abhay@cateina.com",
+      "password": "1234"
+    },
+    {
+      "id": "f50d",
+      "name": "Sambhaji Patil",
+      "email": "sam@cateina.com",
+      "password": "vvvvv"
+    },
+    {
+      "id": "974f",
+      "name": "abhay",
+      "email": "abhay@cateina.com"
+    },
+    {
+      "id": "dcea",
+      "name": "test1 ",
+      "email": "test1@gmail.com",
+      "password": "1234"
+    },
+    {
+      "id": "90cf",
+      "name": "test2",
+      "email": "test2@gmail.com",
+      "password": "1234"
+    }
+  ]
+}
