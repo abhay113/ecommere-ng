@@ -10,15 +10,10 @@ import { Router } from '@angular/router';
 })
 export class SellerComponent {
   signUp(data: signUp): void {
-    console.log(data);
-    this.sellerService.userSignUp(data).subscribe((result) => {
-      console.log(result);
-      alert('registration successfull !');
-      if(result){
-        this.router.navigate(['/seller-home'])
-      }
-    });
+    this.sellerService.userSignUp(data);
   }
 
-  constructor(private sellerService: SellerService, private router:Router) {}
+  constructor(private sellerService: SellerService) {
+    sellerService.reloadSeller();
+  }
 }

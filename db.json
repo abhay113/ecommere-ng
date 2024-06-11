@@ -28,6 +28,18 @@
       "name": "test2",
       "email": "test2@gmail.com",
       "password": "1234"
+    },
+    {
+      "id": "cfe2",
+      "name": "test3guard",
+      "email": "test@guard.com",
+      "password": "1234"
+    },
+    {
+      "id": "611f",
+      "name": "test4localstorage",
+      "email": "test4@gmail.com",
+      "password": "1234"
     }
   ]
 }
