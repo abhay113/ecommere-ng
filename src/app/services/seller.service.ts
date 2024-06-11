@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { signUp } from '../data/sign-up';
 import { BehaviorSubject } from 'rxjs';
 import { Router } from '@angular/router';
+import { login } from '../data/log-in';
 
 @Injectable({
   providedIn: 'root',
@@ -12,7 +13,7 @@ export class SellerService {
 
   isSellerLoggedIn = new BehaviorSubject<boolean>(false);
 
-  userSignUp(data: signUp) {
+  sellerSignUp(data: signUp) {
     return this.httpClient
       .post('http://localhost:3000/seller', data, {
         observe: 'response',
@@ -24,6 +25,10 @@ export class SellerService {
           this.router.navigate(['seller-home']);
         }
       });
+  }
+
+  sellerLogin(data: login) {
+    console.log(data);
   }
 
   reloadSeller() {
