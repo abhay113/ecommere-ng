@@ -11,12 +11,18 @@ import { login } from '../../data/log-in';
 })
 export class SellerComponent {
   sellerLogIn: boolean = true;
+  isAuth: string = '';
   signUp(data: signUp): void {
     this.sellerService.sellerSignUp(data);
   }
 
   logIn(data: login): void {
     this.sellerService.sellerLogin(data);
+    this.sellerService.isLoginError.subscribe((isError) => {
+      if (isError) {
+        this.isAuth = 'Email and Password combination not matched !!';
+      }
+    });
   }
 
   showLogin() {
