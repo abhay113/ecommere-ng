@@ -61,12 +61,12 @@
       "id": "19b6"
     },
     {
-      "id": "da44",
-      "name": "abhay",
+      "name": "Xiaomi 14 ultra",
       "price": "123000",
-      "category": "Smaartphone",
-      "imageUrl": "axs",
-      "description": "asfcv"
+      "category": "Smartphone",
+      "imageUrl": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcT307Y9svKZb2hqJJD2JGCSR61bykpLfm2c7RMJE2vbqLKeUdcZv0U5tlPTSPHjIPFByBXBtJJePVEEkv2qPJRhMX7i3tICfqbTHIQmz7qv2MxzAqzHqHZdSG9B0jny0zv_NHAIGg&usqp=CAc",
+      "description": "this is xiaomi 14",
+      "id": "da44"
     }
   ]
 }
