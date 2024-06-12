@@ -19,4 +19,11 @@ export class ProductService {
   getProductById(id: string) {
     return this.httpClient.get<product>(`http://localhost:3000/products/${id}`);
   }
+
+  updateProduct(data: product) {
+    return this.httpClient.put<product>(
+      `http://localhost:3000/products/${data.id}`,
+      data
+    );
+  }
 }

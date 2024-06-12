@@ -1,6 +1,7 @@
 <div class="add-product">
     <h1>Edit Product Product</h1>
-    <form #editProduct="ngForm" class="common-form" onsubmit="submit(editProduct.value)">
+    <p>{{productMessage}}</p>
+    <form #editProduct="ngForm" class="common-form" (ngSubmit)="submit(editProduct.value)">
         <input class="form-input" type="text" ngModel="{{productData?.name}}" name="name"
             placeholder="Enter Product Name">
         <input class="form-input" type="text" ngModel="{{productData?.price}}" name="price" placeholder="Enter Price">
