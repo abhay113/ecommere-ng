@@ -42,5 +42,31 @@
       "email": "",
       "password": ""
     }
+  ],
+  "products": [
+    {
+      "id": "f6e1",
+      "name": "Samsung S24",
+      "price": 123000,
+      "category": "smartphone",
+      "imageUrl": "simple url",
+      "descrpition": "this is latest smartphone from samsung"
+    },
+    {
+      "id": "5c73",
+      "name": "abhay",
+      "price": "11",
+      "category": "as",
+      "imageUrl": "https://www.javatpoint.com/how-to-align-a-placeholder-text-in-html",
+      "description": "e"
+    },
+    {
+      "id": "e343",
+      "name": "abhay",
+      "price": "11",
+      "category": "as",
+      "imageUrl": "https://www.javatpoint.com/how-to-align-a-placeholder-text-in-html",
+      "description": "ass"
+    }
   ]
 }
