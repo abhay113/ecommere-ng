@@ -20,10 +20,7 @@
                 <td>{{ item.category }}</td>
                 <td>{{ item.description }}</td>
                 <td>
-                    update & delete here
-                    <!-- <fa-icon (click)="deleteProduct(item.id)" [icon]="icon"></fa-icon> -->
-                    <!-- <a class="adjust-update-link" routerLink="/seller-update-product/{{item.id}}"> <fa-icon -->
-                    <!-- [icon]="iconEdit"></fa-icon></a> -->
+                    <button (click)="deleteProduct(item.id)">Delete Product</button>
                 </td>
             </tr>
         </tbody>

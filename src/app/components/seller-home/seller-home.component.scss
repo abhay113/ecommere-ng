@@ -1,6 +1,5 @@
 table {
     text-align: left;
-    color: blueviolet;
     border-collapse: collapse;
     width: 100%;
 }
@@ -21,6 +20,14 @@ table th {
     border: 1px solid blueviolet;
     padding: 10px;
     min-width: 100px;
+}
+
+th {
+    color: blueviolet;
+}
+
+td {
+    color: grey;
 }
 
 .adjust-update-link {

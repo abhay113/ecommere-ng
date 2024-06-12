@@ -45,22 +45,6 @@
   ],
   "products": [
     {
-      "id": "f6e1",
-      "name": "Samsung S24",
-      "price": 123000,
-      "category": "smartphone",
-      "imageUrl": "simple url",
-      "descrpition": "this is latest smartphone from samsung"
-    },
-    {
-      "id": "5c73",
-      "name": "abhay",
-      "price": "11",
-      "category": "as",
-      "imageUrl": "https://img.etimg.com/photo/msid-98945112,imgsize-13860/SamsungGalaxyS23Ultra.jpg",
-      "description": "e"
-    },
-    {
       "id": "e343",
       "name": "abhay",
       "price": "11",
