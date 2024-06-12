@@ -1,11 +1,15 @@
 <div class="add-product">
     <h1>Edit Product Product</h1>
-    <form #editProduct="ngForm" class="common-form" onsubmit="submit()">
-        <input value="defult" class="form-input" type="text" ngModel name="name" placeholder="Enter Product Name">
-        <input class="form-input" type="text" ngModel name="price" placeholder="Enter Price">
-        <input class="form-input" type="text" ngModel name="category" placeholder="Enter Category">
-        <input class="form-input" type="text" ngModel name="imageUrl" placeholder="Enter Image Url">
-        <textarea class="form-input" type="text" ngModel name="description" placeholder="Enter Description"></textarea>
+    <form #editProduct="ngForm" class="common-form" onsubmit="submit(editProduct.value)">
+        <input class="form-input" type="text" ngModel="{{productData?.name}}" name="name"
+            placeholder="Enter Product Name">
+        <input class="form-input" type="text" ngModel="{{productData?.price}}" name="price" placeholder="Enter Price">
+        <input class="form-input" type="text" ngModel="{{productData?.category}}" name="category"
+            placeholder="Enter Category">
+        <input class="form-input" type="text" ngModel="{{productData?.imageUrl}}" name="imageUrl"
+            placeholder="Enter Image Url">
+        <textarea class="form-input" type="text" ngModel="{{productData?.description}}" name="description"
+            placeholder="Enter Description"></textarea>
         <button class="form-button">Update Product</button>
     </form>
 </div>
