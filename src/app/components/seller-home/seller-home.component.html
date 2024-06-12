@@ -1,6 +1,5 @@
 <div class="product-list">
     <h1>Product List</h1>
-    <!-- <p class="message-p">{{ productMessage }}</p> -->
     <table>
         <thead>
             <tr>
@@ -19,10 +18,13 @@
                 <td>{{ item.price }}</td>
                 <td>{{ item.category }}</td>
                 <td>{{ item.description }}</td>
-                <td>
-                    <fa-icon [icon]="faTrash" class="fa-danger"></fa-icon> <button
-                        (click)="deleteProduct(item.id)">Delete
-                        Product</button>
+                <td class="action-column">
+                    <div class="action-box">
+                        <a routerLink="/seller-edit-product/{{item.id}}">
+                            <fa-icon [icon]="faEdit" class="edit"></fa-icon>
+                        </a>
+                        <fa-icon [icon]="faTrash" class="delete" (click)="deleteProduct(item.id)"></fa-icon>
+                    </div>
                 </td>
             </tr>
         </tbody>

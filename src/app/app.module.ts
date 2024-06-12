@@ -11,9 +11,10 @@ import { HttpClientModule } from '@angular/common/http';
 import { SellerHomeComponent } from './components/seller-home/seller-home.component';
 import { SellerAddProductComponent } from './components/seller-add-product/seller-add-product.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { SellerEditProductComponent } from './components/seller-edit-product/seller-edit-product.component';
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, SellerComponent, NavComponent, SellerHomeComponent, SellerAddProductComponent],
+  declarations: [AppComponent, HomeComponent, SellerComponent, NavComponent, SellerHomeComponent, SellerAddProductComponent, SellerEditProductComponent],
   imports: [BrowserModule, AppRoutingModule, FormsModule,HttpClientModule, FontAwesomeModule],
   providers: [],
   bootstrap: [AppComponent],

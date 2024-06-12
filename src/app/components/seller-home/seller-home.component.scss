@@ -33,3 +33,27 @@ td {
 .adjust-update-link {
     margin-left: 10px;
 }
+
+.delete {
+    color: red;
+}
+
+.edit {
+    color: blue;
+}
+
+.edit,
+.delete {
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.action-column {
+    width: 100px;
+}
+
+.action-box {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
