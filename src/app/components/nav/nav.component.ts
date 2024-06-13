@@ -56,4 +56,8 @@ export class NavComponent {
     this.route.navigate([`search/${q}`]);
     this.query = '';
   }
+  redirectToDetails(id: string) {
+    this.route.navigate([`/details/${id}`]);
+    this.query = '';
+  }
 }

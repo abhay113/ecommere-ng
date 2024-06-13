@@ -15,11 +15,22 @@ export class ProductDetailsComponent {
     private route: ActivatedRoute,
     private productService: ProductService
   ) {
+    this.loadData();
+  }
+
+  loadData() {
     let id = this.route.snapshot.paramMap.get('id');
     id &&
       this.productService.getProductById(id).subscribe((result) => {
         this.productData = result;
         console.log(result);
       });
+  }
+  handleQuantity(query: string) {
+    if (query === 'min' && this.quantity > 1) {
+      this.quantity--;
+    } else if (query === 'plus' && this.quantity < 10) {
+      this.quantity++;
+    }
   }
 }
