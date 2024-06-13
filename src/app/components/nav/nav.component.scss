@@ -56,3 +56,33 @@
     color: blueviolet;
     cursor: pointer;
 }
+
+.search-result {
+    position: absolute;
+    display: list-item;
+
+    z-index: 10;
+    background-color: #ddd;
+    top: 45px;
+    width: 550px;
+}
+
+.suggested-search {
+    position: absolute;
+    top: 45px;
+    z-index: 10;
+    display: list-item !important;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    width: 580px;
+}
+
+.suggested-search li {
+    padding: 5px;
+    border: 1px solid #ddd;
+}
+
+.suggested-search li a {
+    cursor: pointer;
+    color: blueviolet;
+}

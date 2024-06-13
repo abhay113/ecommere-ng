@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { ProductService } from '../../services/product.service';
+import { product } from '../../data/product';
 
 @Component({
   selector: 'app-nav',
@@ -9,7 +11,8 @@ import { Router } from '@angular/router';
 export class NavComponent {
   menuType: String = 'default';
   sellerName: string = '';
-  constructor(private route: Router) {
+  searchResult: undefined | product[];
+  constructor(private route: Router, private productService: ProductService) {
     this.route.events.subscribe((val: any) => {
       if (val.url) {
         if (localStorage.getItem('seller') && val.url.includes('seller')) {
@@ -30,5 +33,21 @@ export class NavComponent {
     localStorage.removeItem('seller');
     alert('logout seller ?');
     this.route.navigate(['/']);
+  }
+
+  getSearchQueary(query: KeyboardEvent) {
+    if (query) {
+      const element = query.target as HTMLInputElement;
+      this.productService.searchProducts(element.value).subscribe((result) => {
+        if (result.length > 5) {
+          result.length = 5;
+        }
+        this.searchResult = result;
+      });
+    }
+  }
+
+  hideSearch() {
+    this.searchResult = undefined;
   }
 }

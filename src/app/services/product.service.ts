@@ -36,4 +36,9 @@ export class ProductService {
       'http://localhost:3000/products?_limit=8'
     );
   }
+  searchProducts(q: string) {
+    return this.httpClient.get<product[]>(
+      `http://localhost:3000/products?q=${q}`
+    );
+  }
 }

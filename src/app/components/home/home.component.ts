@@ -14,6 +14,7 @@ export class HomeComponent {
   constructor(private productService: ProductService) {
     this.getTopProducts();
     this.getTrendyProducts();
+
   }
   getTopProducts() {
     this.productService.populateProducts().subscribe((result) => {
