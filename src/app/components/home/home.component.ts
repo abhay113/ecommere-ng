@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { ProductService } from '../../services/product.service';
+import { product } from '../../data/product';
 
 @Component({
   selector: 'app-home',
@@ -6,6 +8,21 @@ import { Component } from '@angular/core';
   styleUrl: './home.component.scss',
 })
 export class HomeComponent {
-  images = [944, 1011, 984].map((n) => `https://picsum.photos/id/${n}/900/500`);
-  constructor() {}
+  topProduct: undefined | product[];
+  trendyProducts: undefined | product[];
+
+  constructor(private productService: ProductService) {
+    this.getTopProducts();
+    this.getTrendyProducts();
+  }
+  getTopProducts() {
+    this.productService.populateProducts().subscribe((result) => {
+      this.topProduct = result;
+    });
+  }
+  getTrendyProducts() {
+    this.productService.populateTrendyProducts().subscribe((result) => {
+      this.trendyProducts = result;
+    });
+  }
 }

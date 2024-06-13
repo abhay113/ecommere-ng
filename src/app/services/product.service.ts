@@ -26,4 +26,14 @@ export class ProductService {
       data
     );
   }
+  populateProducts() {
+    return this.httpClient.get<product[]>(
+      'http://localhost:3000/products?_limit=3'
+    );
+  }
+  populateTrendyProducts() {
+    return this.httpClient.get<product[]>(
+      'http://localhost:3000/products?_limit=8'
+    );
+  }
 }

@@ -44,7 +44,7 @@ export class SellerService {
         }
       });
   }
-
+ 
   reloadSeller() {
     if (localStorage.getItem('seller')) {
       this.isSellerLoggedIn.next(true);
