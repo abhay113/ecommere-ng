@@ -14,9 +14,10 @@ import { SellerEditProductComponent } from './components/seller-edit-product/sel
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { SearchComponent } from './components/search/search.component';
 import { ProductDetailsComponent } from './components/product-details/product-details.component';
+import { UserAuthComponent } from './components/user-auth/user-auth.component';
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, SellerComponent, NavComponent, SellerHomeComponent, SellerAddProductComponent, SellerEditProductComponent, SearchComponent, ProductDetailsComponent],
+  declarations: [AppComponent, HomeComponent, SellerComponent, NavComponent, SellerHomeComponent, SellerAddProductComponent, SellerEditProductComponent, SearchComponent, ProductDetailsComponent, UserAuthComponent],
   imports: [BrowserModule, AppRoutingModule, FormsModule,HttpClientModule, FontAwesomeModule, NgbModule],
   providers: [],
   bootstrap: [AppComponent],
