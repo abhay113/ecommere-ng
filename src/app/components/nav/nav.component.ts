@@ -12,6 +12,7 @@ export class NavComponent {
   menuType: String = 'default';
   sellerName: string = '';
   searchResult: undefined | product[];
+  query: undefined | string;
   constructor(private route: Router, private productService: ProductService) {
     this.route.events.subscribe((val: any) => {
       if (val.url) {
@@ -49,5 +50,10 @@ export class NavComponent {
 
   hideSearch() {
     this.searchResult = undefined;
+  }
+
+  submitSearch(q: string) {
+    this.route.navigate([`search/${q}`]);
+    this.query = '';
   }
 }
