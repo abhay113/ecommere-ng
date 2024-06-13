@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { signUp } from '../../data/sign-up';
+import { UserService } from '../../services/user.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-user-auth',
@@ -7,7 +9,10 @@ import { signUp } from '../../data/sign-up';
   styleUrl: './user-auth.component.scss',
 })
 export class UserAuthComponent {
+  signUpMessage: string | undefined = '';
+
+  constructor(private userService: UserService, private router: Router) {}
   signUp(data: signUp) {
-    console.warn(data);
+    this.userService.userSignUp(data);
   }
 }

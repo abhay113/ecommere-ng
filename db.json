@@ -92,5 +92,31 @@
       "imageUrl": "a",
       "description": "21"
     }
+  ],
+  "users": [
+    {
+      "id": "ac20",
+      "name": "abhay",
+      "email": "test1@gmail.com",
+      "password": "1234"
+    },
+    {
+      "id": "89c3",
+      "name": "Abhay",
+      "email": "test1@gmail.com",
+      "password": "1234"
+    },
+    {
+      "id": "3303",
+      "name": "abhay",
+      "email": "test1@gmail.com",
+      "password": "a"
+    },
+    {
+      "id": "6b2e",
+      "name": "Abhay",
+      "email": "test1@gmail.com",
+      "password": "1234"
+    }
   ]
 }
