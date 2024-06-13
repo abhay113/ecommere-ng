@@ -7,9 +7,11 @@ import { authGuard } from './guards/auth.guard';
 import { SellerAddProductComponent } from './components/seller-add-product/seller-add-product.component';
 import { SellerEditProductComponent } from './components/seller-edit-product/seller-edit-product.component';
 import { SearchComponent } from './components/search/search.component';
+import { ProductDetailsComponent } from './components/product-details/product-details.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
+  { path: '', component: HomeComponent },
   { path: 'seller', component: SellerComponent },
   {
     path: 'seller-home',
@@ -26,10 +28,13 @@ const routes: Routes = [
     component: SellerEditProductComponent,
     canActivate: [authGuard],
   },
-
   {
     path: 'search/:query',
     component: SearchComponent,
+  },
+  {
+    path: 'details/:id',
+    component: ProductDetailsComponent,
   },
 ];
 

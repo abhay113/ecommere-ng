@@ -13,9 +13,10 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { SellerEditProductComponent } from './components/seller-edit-product/seller-edit-product.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { SearchComponent } from './components/search/search.component';
+import { ProductDetailsComponent } from './components/product-details/product-details.component';
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, SellerComponent, NavComponent, SellerHomeComponent, SellerAddProductComponent, SellerEditProductComponent, SearchComponent],
+  declarations: [AppComponent, HomeComponent, SellerComponent, NavComponent, SellerHomeComponent, SellerAddProductComponent, SellerEditProductComponent, SearchComponent, ProductDetailsComponent],
   imports: [BrowserModule, AppRoutingModule, FormsModule,HttpClientModule, FontAwesomeModule, NgbModule],
   providers: [],
   bootstrap: [AppComponent],
