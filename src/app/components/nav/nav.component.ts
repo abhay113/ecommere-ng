@@ -13,6 +13,7 @@ export class NavComponent {
   sellerName: string = '';
   searchResult: undefined | product[];
   query: undefined | string;
+  username: string = '';
   constructor(private route: Router, private productService: ProductService) {
     this.route.events.subscribe((val: any) => {
       if (val.url) {
@@ -23,6 +24,14 @@ export class NavComponent {
             let sellerData = sellerStore && JSON.parse(sellerStore)[0];
             this.sellerName = sellerData.name;
           }
+        } else if (localStorage.getItem('user')) {
+          this.menuType = 'user';
+          let userStore = localStorage.getItem('user');
+          console.warn('s tore', userStore);
+          let userData = userStore && JSON.parse(userStore);
+          console.warn('data', userData);
+          this.username = userData.name;
+          console.warn('username', this.username);
         } else {
           this.menuType = 'default';
         }
