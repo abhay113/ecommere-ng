@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { EventEmitter, Injectable } from '@angular/core';
 import { signUp } from '../data/sign-up';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
@@ -8,6 +8,7 @@ import { login } from '../data/log-in';
   providedIn: 'root',
 })
 export class UserService {
+  invalidUserAuth = new EventEmitter<boolean>(false);
   constructor(private httpClient: HttpClient, private router: Router) {}
 
   userSignUp(data: signUp) {
@@ -30,9 +31,12 @@ export class UserService {
         { observe: 'response' }
       )
       .subscribe((result) => {
-        if (result && result.body) {
+        if (result && result.body?.length) {
           localStorage.setItem('user', JSON.stringify(result.body[0]));
           this.router.navigate(['/']);
+          this.invalidUserAuth.emit(false);
+        } else {
+          this.invalidUserAuth.emit(true);
         }
       });
   }

@@ -27,11 +27,8 @@ export class NavComponent {
         } else if (localStorage.getItem('user')) {
           this.menuType = 'user';
           let userStore = localStorage.getItem('user');
-          console.warn('s tore', userStore);
           let userData = userStore && JSON.parse(userStore);
-          console.warn('data', userData);
           this.username = userData.name;
-          console.warn('username', this.username);
         } else {
           this.menuType = 'default';
         }
@@ -43,6 +40,11 @@ export class NavComponent {
     localStorage.removeItem('seller');
     alert('logout seller ?');
     this.route.navigate(['/']);
+  }
+
+  userLogout() {
+    localStorage.removeItem('user');
+    this.route.navigate(['/user-auth']);
   }
 
   getSearchQueary(query: KeyboardEvent) {

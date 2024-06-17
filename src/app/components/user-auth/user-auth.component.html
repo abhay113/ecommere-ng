@@ -4,9 +4,13 @@
         <p>{{signUpMessage}}</p>
         <form #userSignUp="ngForm" class="common-form" (ngSubmit)="signUp(userSignUp.value)">
             <input type="text" class="form-input" name="name" placeholder="Enter User Name" ngModel />
-            <input type="text" class="form-input" name="email" placeholder="Enter User Email" ngModel /><input
-                type="password" class="form-input" name="password" placeholder="Enter User Password" ngModel />
-            <button class="form-button">Sign Up</button>
+            <input type="text" email #email="ngModel" required class="form-input" name="email"
+                placeholder="Enter User Email" ngModel />
+            <p class="invalid-input" *ngIf="email.invalid &&email.touched"><span>email is not valid</span></p>
+            <input #password="ngModel" required type="password" class="form-input" name="password" minlength="2"
+                maxlength="20" placeholder="Enter User Password" ngModel />
+            <p class="invalid-input" *ngIf="password.invalid &&password.touched"><span>password is not valid</span></p>
+            <button [disabled]="userSignUp.invalid" class="form-button">Sign Up</button>
             <p class="toggle-option">Already have an Account ? <a (click)="openLogin()">Click Here</a></p>
         </form>
     </div>
@@ -14,9 +18,12 @@
     <div *ngIf="showLogin" class="login">
         <h1>User Login</h1>
         <form #userLogin="ngForm" class="common-form" (ngSubmit)="login(userLogin.value)">
-            <input type="text" class="form-input" name="email" placeholder="Enter User Email" ngModel /><input
-                type="password" class="form-input" name="password" placeholder="Enter User Password" ngModel />
-            <button class="form-button">Login</button>
+            <p class="invalid-input "> {{authError}} </p>
+            <input type="text" #email="ngModel" required class="form-input" name="email" placeholder="Enter User Email"
+                ngModel />
+            <input type="password" minlength="2" max="20" #password="ngModel" required class="form-input"
+                name="password" placeholder="Enter User Password" ngModel />
+            <button [disabled]="userLogin.invalid" class="form-button">Login</button>
             <p class="toggle-option">Don't have an Account ? <a (click)="openSignUp()">Click Here</a></p>
         </form>
     </div>

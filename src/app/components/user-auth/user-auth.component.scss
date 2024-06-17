@@ -17,3 +17,13 @@
 .toggle-option {
     margin-top: 20px;
 }
+
+.invalid-input {
+    color: red;
+    font-size: 15px;
+    margin-top: -20px;
+}
+
+button:disabled {
+    cursor: not-allowed;
+}

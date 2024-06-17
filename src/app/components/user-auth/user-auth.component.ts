@@ -12,7 +12,7 @@ import { login } from '../../data/log-in';
 export class UserAuthComponent {
   signUpMessage: string | undefined = '';
   showLogin: boolean = false;
-
+  authError: string = '';
   constructor(private userService: UserService, private router: Router) {}
   signUp(data: signUp) {
     this.userService.userSignUp(data);
@@ -20,6 +20,11 @@ export class UserAuthComponent {
 
   login(data: login) {
     this.userService.userLogin(data);
+    this.userService.invalidUserAuth.subscribe((result) => {
+      if (result) {
+        this.authError = 'User Not Found !!';
+      }
+    });
   }
   openSignUp() {
     this.showLogin = false;
