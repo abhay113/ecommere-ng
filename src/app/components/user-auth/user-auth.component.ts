@@ -19,7 +19,7 @@ export class UserAuthComponent {
   }
 
   login(data: login) {
-    console.warn(data);
+    this.userService.userLogin(data);
   }
   openSignUp() {
     this.showLogin = false;

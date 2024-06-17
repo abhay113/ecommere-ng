@@ -135,6 +135,12 @@
       "name": "Abhay",
       "email": "test1@gmail.com",
       "password": "1234"
+    },
+    {
+      "id": "c7ea",
+      "name": "mera",
+      "email": "meranam@gmail.com",
+      "password": "1234"
     }
   ]
 }

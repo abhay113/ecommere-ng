@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { signUp } from '../data/sign-up';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
+import { login } from '../data/log-in';
 
 @Injectable({
   providedIn: 'root',
@@ -20,5 +21,24 @@ export class UserService {
           this.router.navigate(['/home']);
         }
       });
+  }
+
+  userLogin(data: login) {
+    this.httpClient
+      .get<signUp[]>(
+        `http://localhost:3000/users?email=${data.email}&password=${data.password}`,
+        { observe: 'response' }
+      )
+      .subscribe((result) => {
+        if (result && result.body) {
+          localStorage.setItem('user', JSON.stringify(result.body[0]));
+          this.router.navigate(['/']);
+        }
+      });
+  }
+  userAuthReload() {
+    if (localStorage.getItem('user')) {
+      this.router.navigate(['/']);
+    }
   }
 }
