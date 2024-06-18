@@ -11,6 +11,7 @@ import { ProductService } from '../../services/product.service';
 export class ProductDetailsComponent {
   productData: undefined | product;
   quantity: number = 1;
+  removeCart: boolean = false;
   constructor(
     private route: ActivatedRoute,
     private productService: ProductService
@@ -23,7 +24,16 @@ export class ProductDetailsComponent {
     id &&
       this.productService.getProductById(id).subscribe((result) => {
         this.productData = result;
-        console.log(result);
+        let cartData = localStorage.getItem('localCart');
+        if (id && cartData) {
+          let items = JSON.parse(cartData);
+          items = items.filter((item: product) => id == item.id.toString());
+          if (items.length) {
+            this.removeCart = true;
+          } else {
+            this.removeCart = false;
+          }
+        }
       });
   }
   handleQuantity(query: string) {
@@ -39,8 +49,13 @@ export class ProductDetailsComponent {
       this.productData.quantity = this.quantity;
       if (!localStorage.getItem('user')) {
         this.productService.localAddToCart(this.productData);
+        this.removeCart = true;
       }
-      console.log(this.productData);
     }
+  }
+
+  removeFromCart(id: string) {
+    this.productService.removeItemFromCart(id);
+    this.removeCart = false;
   }
 }

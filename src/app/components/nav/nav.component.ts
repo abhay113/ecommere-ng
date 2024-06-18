@@ -14,6 +14,7 @@ export class NavComponent {
   searchResult: undefined | product[];
   query: undefined | string;
   username: string = '';
+  cartItems = 0;
   constructor(private route: Router, private productService: ProductService) {
     this.route.events.subscribe((val: any) => {
       if (val.url) {
@@ -33,6 +34,14 @@ export class NavComponent {
           this.menuType = 'default';
         }
       }
+    });
+
+    let cartData = localStorage.getItem('localCart');
+    if (cartData) {
+      this.cartItems = JSON.parse(cartData).length;
+    }
+    this.productService.cartData.subscribe((items) => {
+      this.cartItems = items.length;
     });
   }
 
