@@ -5,4 +5,5 @@ export interface product {
   imageUrl: string;
   category: string;
   description: string;
+  quantity: undefined|number;
 }

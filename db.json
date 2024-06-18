@@ -77,20 +77,12 @@
       "id": "994a"
     },
     {
-      "id": "ae15",
-      "name": "a",
+      "name": "asdag",
       "price": "1",
       "category": "12",
-      "imageUrl": "a",
-      "description": "21"
-    },
-    {
-      "id": "5079",
-      "name": "a",
-      "price": "1",
-      "category": "12",
-      "imageUrl": "a",
-      "description": "21"
+      "imageUrl": "data:image/webp;base64,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",
+      "description": "21",
+      "id": "5079"
     }
   ],
   "users": [
@@ -101,58 +93,10 @@
       "password": "1234"
     },
     {
-      "id": "89c3",
-      "name": "Abhay",
-      "email": "test1@gmail.com",
-      "password": "1234"
-    },
-    {
-      "id": "3303",
-      "name": "abhay",
-      "email": "test1@gmail.com",
-      "password": "a"
-    },
-    {
-      "id": "6b2e",
-      "name": "Abhay",
-      "email": "test1@gmail.com",
-      "password": "1234"
-    },
-    {
-      "id": "6332",
-      "name": "Abhay",
-      "email": "test1@gmail.com",
-      "password": "a"
-    },
-    {
-      "id": "7cc5",
-      "name": "Abhay",
-      "email": "test1@gmail.com",
-      "password": "a"
-    },
-    {
-      "id": "b987",
-      "name": "Abhay",
-      "email": "test1@gmail.com",
-      "password": "1234"
-    },
-    {
       "id": "c7ea",
       "name": "mera",
       "email": "meranam@gmail.com",
       "password": "1234"
-    },
-    {
-      "id": "fd88",
-      "name": "",
-      "email": "",
-      "password": ""
-    },
-    {
-      "id": "0e7f",
-      "name": "",
-      "email": "",
-      "password": ""
     }
   ]
 }
