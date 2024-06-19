@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { product } from '../../data/product';
 import { ProductService } from '../../services/product.service';
+import { cart } from '../../data/cart';
 
 @Component({
   selector: 'app-product-details',
@@ -12,6 +13,7 @@ export class ProductDetailsComponent {
   productData: undefined | product;
   quantity: number = 1;
   removeCart: boolean = false;
+  cartMessage: string = '';
   constructor(
     private route: ActivatedRoute,
     private productService: ProductService
@@ -50,6 +52,20 @@ export class ProductDetailsComponent {
       if (!localStorage.getItem('user')) {
         this.productService.localAddToCart(this.productData);
         this.removeCart = true;
+      } else {
+        let user = localStorage.getItem('user');
+        let userId = user && JSON.parse(user).id;
+        let cartData: cart = {
+          ...this.productData,
+          productId: this.productData.id,
+          userId,
+        };
+        delete cartData.id;
+        this.productService.addToCart(cartData).subscribe((result) => {
+          if (result) {
+            this.cartMessage = 'Added to Cart !';
+          }
+        });
       }
     }
   }

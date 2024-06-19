@@ -53,7 +53,8 @@ export class NavComponent {
 
   userLogout() {
     localStorage.removeItem('user');
-    this.route.navigate(['/user-auth']);
+    alert('logout user ?');
+    this.route.navigate(['/']);
   }
 
   getSearchQueary(query: KeyboardEvent) {
