@@ -16,6 +16,10 @@ export class NavComponent {
   username: string = '';
   cartItems = 0;
   constructor(private route: Router, private productService: ProductService) {
+    this.loadNav();
+  }
+
+  loadNav() {
     this.route.events.subscribe((val: any) => {
       if (val.url) {
         if (localStorage.getItem('seller') && val.url.includes('seller')) {
@@ -55,6 +59,7 @@ export class NavComponent {
     localStorage.removeItem('user');
     alert('logout user ?');
     this.route.navigate(['/']);
+    this.productService.cartData.emit([]);
   }
 
   getSearchQueary(query: KeyboardEvent) {
