@@ -58,7 +58,7 @@ export class ProductDetailsComponent {
         let cartData: cart = {
           ...this.productData,
           productId: this.productData.id,
-          userId,
+          userId: userId,
         };
         delete cartData.id;
         this.productService.addToCart(cartData).subscribe((result) => {

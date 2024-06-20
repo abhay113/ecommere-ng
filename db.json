@@ -97,6 +97,18 @@
       "name": "mera",
       "email": "meranam@gmail.com",
       "password": "1234"
+    },
+    {
+      "id": "8c2d",
+      "name": "Rashi",
+      "email": "r@gmail.com",
+      "password": "1234"
+    },
+    {
+      "id": "ab7a",
+      "name": "n",
+      "email": "n@gmail.com",
+      "password": "1234"
     }
   ],
   "cart": [
@@ -132,6 +144,94 @@
       "quantity": 1,
       "productId": "e343",
       "userId": "ac20"
+    },
+    {
+      "id": "22d9",
+      "name": "Xiaomi 14 ultra",
+      "price": "123000",
+      "category": "Smartphone",
+      "imageUrl": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcT307Y9svKZb2hqJJD2JGCSR61bykpLfm2c7RMJE2vbqLKeUdcZv0U5tlPTSPHjIPFByBXBtJJePVEEkv2qPJRhMX7i3tICfqbTHIQmz7qv2MxzAqzHqHZdSG9B0jny0zv_NHAIGg&usqp=CAc",
+      "description": "this is xiaomi 14",
+      "quantity": 1,
+      "productId": "da44",
+      "userId": "8c2d"
+    },
+    {
+      "id": "26c7",
+      "name": "Xiaomi 14 ultra",
+      "price": "123000",
+      "category": "Smartphone",
+      "imageUrl": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcT307Y9svKZb2hqJJD2JGCSR61bykpLfm2c7RMJE2vbqLKeUdcZv0U5tlPTSPHjIPFByBXBtJJePVEEkv2qPJRhMX7i3tICfqbTHIQmz7qv2MxzAqzHqHZdSG9B0jny0zv_NHAIGg&usqp=CAc",
+      "description": "this is xiaomi 14",
+      "quantity": 1,
+      "productId": "da44",
+      "userId": "8c2d"
+    },
+    {
+      "id": "4360",
+      "name": "Xiaomi 14 ultra",
+      "price": "123000",
+      "category": "Smartphone",
+      "imageUrl": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcT307Y9svKZb2hqJJD2JGCSR61bykpLfm2c7RMJE2vbqLKeUdcZv0U5tlPTSPHjIPFByBXBtJJePVEEkv2qPJRhMX7i3tICfqbTHIQmz7qv2MxzAqzHqHZdSG9B0jny0zv_NHAIGg&usqp=CAc",
+      "description": "this is xiaomi 14",
+      "quantity": 1,
+      "productId": "da44",
+      "userId": "8c2d"
+    },
+    {
+      "id": "4d98",
+      "name": "Xiaomi 14 ultra",
+      "price": "123000",
+      "category": "Smartphone",
+      "imageUrl": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcT307Y9svKZb2hqJJD2JGCSR61bykpLfm2c7RMJE2vbqLKeUdcZv0U5tlPTSPHjIPFByBXBtJJePVEEkv2qPJRhMX7i3tICfqbTHIQmz7qv2MxzAqzHqHZdSG9B0jny0zv_NHAIGg&usqp=CAc",
+      "description": "this is xiaomi 14",
+      "quantity": 1,
+      "productId": "da44",
+      "userId": "8c2d"
+    },
+    {
+      "id": "4b0e",
+      "name": "Iphone 15",
+      "price": "720000",
+      "category": "Smartphone",
+      "imageUrl": "https://m.media-amazon.com/images/I/71v2jVh6nIL._AC_UF1000,1000_QL80_.jpg",
+      "description": "this is the iphone 15 basic model",
+      "quantity": 1,
+      "productId": "19b6",
+      "userId": null
+    },
+    {
+      "id": "0a55",
+      "name": "Samsung S23",
+      "price": "123000",
+      "category": "Smaartphone",
+      "imageUrl": "https://img.etimg.com/photo/msid-98945112,imgsize-13860/SamsungGalaxyS23Ultra.jpg",
+      "description": "latest samsung phone previous year",
+      "quantity": 1,
+      "productId": "e343",
+      "userId": null
+    },
+    {
+      "id": "053c",
+      "name": "Xiaomi 14 ultra",
+      "price": "123000",
+      "category": "Smartphone",
+      "imageUrl": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcT307Y9svKZb2hqJJD2JGCSR61bykpLfm2c7RMJE2vbqLKeUdcZv0U5tlPTSPHjIPFByBXBtJJePVEEkv2qPJRhMX7i3tICfqbTHIQmz7qv2MxzAqzHqHZdSG9B0jny0zv_NHAIGg&usqp=CAc",
+      "description": "this is xiaomi 14",
+      "quantity": 1,
+      "productId": "da44",
+      "userId": null
+    },
+    {
+      "id": "73c3",
+      "name": "Samsung S23",
+      "price": "123000",
+      "category": "Smaartphone",
+      "imageUrl": "https://img.etimg.com/photo/msid-98945112,imgsize-13860/SamsungGalaxyS23Ultra.jpg",
+      "description": "latest samsung phone previous year",
+      "quantity": 1,
+      "productId": "e343",
+      "userId": null
     }
   ]
 }

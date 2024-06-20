@@ -24,7 +24,7 @@ export class UserAuthComponent {
   signUp(data: signUp) {
     this.userService.userSignUp(data);
     this.localCartToRmoteCart();
-    }
+  }
 
   login(data: login) {
     this.userService.userLogin(data);
@@ -46,11 +46,11 @@ export class UserAuthComponent {
   localCartToRmoteCart() {
     let data = localStorage.getItem('localCart');
 
+    let user = localStorage.getItem('user');
+    let userId = user && JSON.parse(user).id;
+
     if (data) {
       let cartList: product[] = JSON.parse(data);
-      let user = localStorage.getItem('user');
-      let userId = user && JSON.parse(user).id;
-
       cartList.forEach((item, index) => {
         let cartData: cart = {
           ...item,
@@ -72,5 +72,9 @@ export class UserAuthComponent {
         }
       });
     }
+
+    setTimeout(() => {
+      this.productService.getCartList(userId);
+    }, 1000);
   }
 }
